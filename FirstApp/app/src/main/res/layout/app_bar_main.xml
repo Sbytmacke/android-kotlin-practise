@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.FirstApp.AppBarOverlay">
 
+        <!-- Si queremos otro componente (ActionBar), simplemente buscamos otras librerías -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"

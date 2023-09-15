@@ -10,42 +10,53 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import dev.sbytmacke.firstapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
+    // Instancia para enlazar una interfaz XML con el resto de componentes
+    /* Y realizar la jerarquía */
     private lateinit var binding: ActivityMainBinding
+
+    // Instancia de la barra de navegación, para configurar su comportamiento
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Inflar se refiere a establecer como raíz el XML llamado activity_main.xml
+        /* Es posible, debido a que en el build.gradle tenemos: viewBinding { enabled = true } */
         binding = ActivityMainBinding.inflate(layoutInflater)
+
+        // Asignamos que la interfaz raíz XML sea: activity_main.xml
         setContentView(binding.root)
 
+        // Colocamos barra de acción superior, proporcionado por la librería Android
+        /* En caso de querer utilizar otra ActionBar, debemos en el XML cambiarlo */
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+        // Contenedor lateral, desliza la navegación (apertura y cierre)
         val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
+
+        // Mediante el controlador realizamos la navegación gracias a los ID´s
+        /* Asignamos aquí el fragmento inicial/home */
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
+        // Inicializamos la configuración de la barra de navegación con sus destinos y su contenedor
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_login,
                 R.id.nav_login_linear,
-                R.id.nav_home,
-                R.id.nav_gallery,
-                R.id.nav_slideshow
+                R.id.nav_home
             ), drawerLayout
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        // Componente lateral de la navegación, donde se acoplan todos los elementos junto al controlador
+        val navView: NavigationView = binding.navView
         navView.setupWithNavController(navController)
+
+        // Cargamos la configuración junto al controlador
+        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

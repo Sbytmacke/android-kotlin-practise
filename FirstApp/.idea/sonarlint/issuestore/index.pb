@@ -15,3 +15,9 @@ r
 Bapp/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginFragment.kt,c\e\ce7152bb482d91a942571289cb0271db1e348d6e
 x
 Happ/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginLinearFragment.kt,8\9\89cfe62540febc5864cea9626499475fdea99af4
+h
+8app/src/main/java/dev/sbytmacke/firstapp/ui/ViewModel.md,b\3\b365d5ee73a8963230db53f46c7e995c63b2abe5
+@
+build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
+D
+app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
