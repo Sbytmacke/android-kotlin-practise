@@ -1,8 +1,4 @@
 
-z
-Japp/src/main/java/dev/sbytmacke/firstapp/ui/slideshow/SlideshowFragment.kt,f\d\fd646127867505474f6b008b78b89bffba3e9db7
-v
-Fapp/src/main/java/dev/sbytmacke/firstapp/ui/gallery/GalleryFragment.kt,3\5\354e62ef03174f8111ac3883da37cdd390ff7099
 p
 @app/src/main/java/dev/sbytmacke/firstapp/ui/home/HomeFragment.kt,9\f\9f8d283e9a110eb3657c7ccfbca4a26707230033
 q
@@ -21,3 +17,9 @@ h
 build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
 D
 app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
+C
+settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+|
+Lapp/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginConstraintFragment.kt,5\5\553690ca4c067f75fd9aed85d8c7137b10284d3a

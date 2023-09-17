@@ -7,16 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import dev.sbytmacke.firstapp.R
-import dev.sbytmacke.firstapp.databinding.FragmentHomeBinding
+import dev.sbytmacke.firstapp.databinding.FragmentLoginLinearBinding
 
 class LoginLinearFragment : Fragment() {
 
-    // TODO: Como cambio el fragment de HomeBinding a  LoginFragment??
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentLoginLinearBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -24,23 +20,16 @@ class LoginLinearFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val loginViewModel =
-            ViewModelProvider(this).get(LoginViewModel::class.java)
+        val loginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
-        // El inflater es el layout?
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.login_main_linear, container, false)
+        _binding = FragmentLoginLinearBinding.inflate(inflater, container, false)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHome
+        val textView: TextView = binding.textViewLinear
         loginViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
 
-        // Retornamos root o view
-        return view
+        return binding.root
     }
 
     override fun onDestroyView() {

@@ -6,10 +6,16 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:id="@+id/nav_home"
+        android:name="dev.sbytmacke.firstapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
         android:id="@+id/nav_login"
-        android:name="dev.sbytmacke.firstapp.ui.login.LoginFragment"
+        android:name="dev.sbytmacke.firstapp.ui.login.LoginConstraintFragment"
         android:label="Login"
-        tools:layout="@layout/login_main">
+        tools:layout="@layout/fragment_login_constraint">
         <action
             android:id="@+id/action_nav_login_to_nav_login_linear"
             app:destination="@id/nav_login_linear" />
@@ -19,11 +25,6 @@
         android:id="@+id/nav_login_linear"
         android:name="dev.sbytmacke.firstapp.ui.login.LoginLinearFragment"
         android:label="LoginLinear"
-        tools:layout="@layout/login_main_linear" />
+        tools:layout="@layout/fragment_login_linear" />
 
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="dev.sbytmacke.firstapp.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
 </navigation>

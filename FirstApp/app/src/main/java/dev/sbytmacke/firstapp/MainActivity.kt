@@ -14,8 +14,8 @@ import dev.sbytmacke.firstapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    // Instancia para enlazar una interfaz XML con el resto de componentes
-    /* Y realizar la jerarquía */
+    // Instancia para enlazar una interfaz XML con el resto de componentes, jerarquizada por nodos
+    /* Realiza jerarquía por nodos entre distintas vistas y elementos, empezando por root */
     private lateinit var binding: ActivityMainBinding
 
     // Instancia de la barra de navegación, para configurar su comportamiento
@@ -24,23 +24,29 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inflar se refiere a establecer como raíz el XML llamado activity_main.xml
+        // Inflar se refiere a crear como raíz el XML llamado activity_main.xml
         /* Es posible, debido a que en el build.gradle tenemos: viewBinding { enabled = true } */
         binding = ActivityMainBinding.inflate(layoutInflater)
+
+        // Es posible prescindir del "binding" y "viewBinding", pero es más óptimo con él, ya que garantiza referencias en tiempo de compilación
+        /*val inflater = layoutInflater
+        val rootView = inflater.inflate(R.layout.nuevo_layout, null)*/
 
         // Asignamos que la interfaz raíz XML sea: activity_main.xml
         setContentView(binding.root)
 
         // Colocamos barra de acción superior, proporcionado por la librería Android
         /* En caso de querer utilizar otra ActionBar, debemos en el XML cambiarlo */
-        setSupportActionBar(binding.appBarMain.toolbar)
+        // setSupportActionBar(binding.appBarMain.toolbar) // Convencional de android + òptimo
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         // Contenedor lateral, desliza la navegación (apertura y cierre)
-        val drawerLayout: DrawerLayout = binding.drawerLayout
+        //val conventionalDrawerLayout: DrawerLayout = binding.drawerLayout // Convencional de android + òptimo
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout_main)
 
         // Mediante el controlador realizamos la navegación gracias a los ID´s
         /* Asignamos aquí el fragmento inicial/home */
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        val navController = findNavController(R.id.fragment_nav_controller)
 
         // Inicializamos la configuración de la barra de navegación con sus destinos y su contenedor
         appBarConfiguration = AppBarConfiguration(
@@ -52,21 +58,25 @@ class MainActivity : AppCompatActivity() {
         )
 
         // Componente lateral de la navegación, donde se acoplan todos los elementos junto al controlador
-        val navView: NavigationView = binding.navView
+        // val navView: NavigationView = binding.navView // Convencional de android + òptimo
+        val navView: NavigationView = findViewById(R.id.nav_view)
         navView.setupWithNavController(navController)
 
         // Cargamos la configuración junto al controlador
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
+    // Infla = Crea el menú al instanciar MainActivity, utilizando la vista XML: menu/main.xml
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
+        menuInflater.inflate(R.menu.items_action_bar, menu)
         return true
     }
 
+    // Acción de navegación hacia atrás
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        // Buscamos al controlador en el XML
+        val navController = findNavController(R.id.fragment_nav_controller)
+        // Devuelve true si la navegación se realiza hacia atrás
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }

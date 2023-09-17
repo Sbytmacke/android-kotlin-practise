@@ -11,10 +11,10 @@ import dev.sbytmacke.firstapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
+    /* Se utiliza para acceder a las vistas en el archivo de diseño XML asociado a este fragmento,
+    con el mismo nombre pero en snake_case */
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,17 +22,24 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
 
+        /*
+         * Inflar la vista utilizando el archivo de diseño personalizado
+         * val view = inflater.inflate(R.layout.my_custom_layout, container, false)
+         * return view
+        */
+        // Se infla/crea el diseño XML asociado, con el mismo nombre pero en snake_case
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
+        // Patrón observer, cambios observables en TEXTO
         val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
-        return root
+
+        // Devolverá la vista principal del fragmento
+        return binding.root
     }
 
     override fun onDestroyView() {
