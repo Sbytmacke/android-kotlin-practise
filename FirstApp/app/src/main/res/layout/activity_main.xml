@@ -24,4 +24,5 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/fragment_header"
         app:menu="@menu/items_nav" />
+
 </androidx.drawerlayout.widget.DrawerLayout>

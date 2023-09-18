@@ -7,8 +7,6 @@ s
 Capp/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginViewModel.kt,4\2\42d29301069468a8e6d371e30f6622ef10c2b694
 h
 8app/src/main/java/dev/sbytmacke/firstapp/MainActivity.kt,7\6\76a12f37865cecb288189a61d3932cee76c8b038
-r
-Bapp/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginFragment.kt,c\e\ce7152bb482d91a942571289cb0271db1e348d6e
 x
 Happ/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginLinearFragment.kt,8\9\89cfe62540febc5864cea9626499475fdea99af4
 h
@@ -23,3 +21,9 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 |
 Lapp/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginConstraintFragment.kt,5\5\553690ca4c067f75fd9aed85d8c7137b10284d3a
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+g
+7app/src/main/java/dev/sbytmacke/firstapp/models/Note.kt,a\3\a34637361920974c7efcce6e47f3ee195db395b0
+p
+@app/src/main/java/dev/sbytmacke/firstapp/ui/home/NotesAdapter.kt,c\d\cd3c3815270face737470f20db43ff984246745c

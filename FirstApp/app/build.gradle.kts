@@ -38,6 +38,7 @@ android {
     /* Esto permite que recoja como raíz el XML llamado activity_main.xml */
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 

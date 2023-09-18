@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.login.LoginConstraintFragment">
 
-
     <TextView
         android:id="@+id/textViewLoginConstraint"
         android:layout_width="131dp"
