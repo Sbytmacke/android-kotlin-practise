@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_login,
-                R.id.nav_login_linear,
-                R.id.nav_home
+                R.id.nav_booba_typing,
+                R.id.nav_notes
             ), drawerLayout
         )
 
@@ -79,4 +79,5 @@ class MainActivity : AppCompatActivity() {
         // Devuelve true si la navegación se realiza hacia atrás
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
 }

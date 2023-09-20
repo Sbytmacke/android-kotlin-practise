@@ -1,4 +1,4 @@
-package dev.sbytmacke.firstapp.ui.home
+package dev.sbytmacke.firstapp.ui.notes
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,11 +9,11 @@ import dev.sbytmacke.firstapp.models.Note
   Intercambiamos información entre vistas si es necesario, y almacenamos la información en
   caso de no querer perderla si cambiamos de vistas
 */
-class HomeViewModel : ViewModel() {
+class NoteViewModel : ViewModel() {
 
-    // NOTES
-    private val _notes = MutableLiveData<List<String>>()
-    val notes: LiveData<List<String>> get() = _notes
+    // Esto sería notas en memoria, aquí iría recoger las notas de la BB.DD
+    private val _notes = MutableLiveData<List<Note>>()
+    val notes: LiveData<List<Note>> get() = _notes
 
     init {
         _notes.value = mutableListOf()
@@ -21,23 +21,13 @@ class HomeViewModel : ViewModel() {
 
     fun addNote(note: Note) {
         val currentNotes = _notes.value?.toMutableList() ?: mutableListOf()
-        currentNotes.add(note.content)
+        currentNotes.add(note)
         _notes.value = currentNotes
-    }
-    // NOTES
-
-    // Datos en memoria de IMÁGENES, entre vistas
-    private val _imageResource = MutableLiveData<Int>()
-    val getImageResource: LiveData<Int>
-        get() = _imageResource
-
-    fun updateImageResource(resourceId: Int) {
-        _imageResource.value = resourceId
     }
 
     fun deleteNote(note: Note) {
         val currentNotes = _notes.value.orEmpty().toMutableList()
-        currentNotes.remove(note.content)
+        currentNotes.remove(note)
         _notes.value = currentNotes
     }
 

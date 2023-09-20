@@ -1,14 +1,8 @@
 
 h
 8app/src/main/java/dev/sbytmacke/firstapp/MainActivity.kt,7\6\76a12f37865cecb288189a61d3932cee76c8b038
-p
-@app/src/main/java/dev/sbytmacke/firstapp/ui/home/HomeFragment.kt,9\f\9f8d283e9a110eb3657c7ccfbca4a26707230033
-q
-Aapp/src/main/java/dev/sbytmacke/firstapp/ui/home/HomeViewModel.kt,6\d\6dcede536a73bbd78be3d56c2308ce7188a09998
 s
 Capp/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginViewModel.kt,4\2\42d29301069468a8e6d371e30f6622ef10c2b694
-x
-Happ/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginLinearFragment.kt,8\9\89cfe62540febc5864cea9626499475fdea99af4
 h
 8app/src/main/java/dev/sbytmacke/firstapp/ui/ViewModel.md,b\3\b365d5ee73a8963230db53f46c7e995c63b2abe5
 @
@@ -25,5 +19,11 @@ A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 g
 7app/src/main/java/dev/sbytmacke/firstapp/models/Note.kt,a\3\a34637361920974c7efcce6e47f3ee195db395b0
-p
-@app/src/main/java/dev/sbytmacke/firstapp/ui/home/NotesAdapter.kt,c\d\cd3c3815270face737470f20db43ff984246745c
+q
+Aapp/src/main/java/dev/sbytmacke/firstapp/ui/notes/NoteFragment.kt,1\3\136604e5faa6aa0f96f1fa68bd9753acfd3fb5ac
+q
+Aapp/src/main/java/dev/sbytmacke/firstapp/ui/notes/NotesAdapter.kt,c\6\c66fcc785a9c7ac09232133aa700655a2e23bcca
+r
+Bapp/src/main/java/dev/sbytmacke/firstapp/ui/notes/NoteViewModel.kt,6\c\6c45335899862d815a85f6054720975c7dbd62d4
+~
+Napp/src/main/java/dev/sbytmacke/firstapp/ui/boobaTyping/BoobaTypingFragment.kt,c\8\c897e5e4dde39513ac355a1ffe34a587b19b3942

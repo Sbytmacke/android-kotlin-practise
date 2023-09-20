@@ -8,13 +8,13 @@
         <item
             android:id="@+id/nav_login"
             android:icon="@drawable/user"
-            android:title="LoginConstraint" />
+            android:title="Login" />
         <item
-            android:id="@+id/nav_login_linear"
-            android:icon="@drawable/user"
-            android:title="LoginLinear" />
+            android:id="@+id/nav_booba_typing"
+            android:icon="@drawable/ic_vykas"
+            android:title="Booba Typing ^^" />
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_notes"
             android:icon="@drawable/plus"
             android:title="Notes" />
     </group>
