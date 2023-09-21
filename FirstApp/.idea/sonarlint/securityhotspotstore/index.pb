@@ -13,8 +13,6 @@ C
 settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-|
-Lapp/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginConstraintFragment.kt,5\5\553690ca4c067f75fd9aed85d8c7137b10284d3a
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 g
@@ -27,3 +25,11 @@ r
 Bapp/src/main/java/dev/sbytmacke/firstapp/ui/notes/NoteViewModel.kt,6\c\6c45335899862d815a85f6054720975c7dbd62d4
 ~
 Napp/src/main/java/dev/sbytmacke/firstapp/ui/boobaTyping/BoobaTypingFragment.kt,c\8\c897e5e4dde39513ac355a1ffe34a587b19b3942
+
+Oapp/src/main/java/dev/sbytmacke/firstapp/ui/boobaTyping/BoobaTypingViewModel.kt,8\2\82c5a95fd9f63e4f14dd20daffb4d5fb51d3418d
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+r
+Bapp/src/main/java/dev/sbytmacke/firstapp/ui/login/LoginFragment.kt,c\e\ce7152bb482d91a942571289cb0271db1e348d6e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
