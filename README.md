@@ -3,4 +3,6 @@
 Repositories to study Android structure
 
 - Notes App
-- Delivery Central
+- Booba Typing (mini-game)
+- Reproductor music
+- Calculator
