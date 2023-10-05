@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#76244d"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.calculator.CalculatorFragment">
+
+    <!-- Title -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_vykas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vykas_community"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculator"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSlogan" />
+
+    <LinearLayout
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultText"
+            android:textSize="40sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/resultDynamic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="40sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/numberLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText">
+
+        <!-- First Line -->
+        <LinearLayout
+            android:id="@+id/linearNumbers1To4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/number1"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/number2"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="2"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/number1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/number3"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="3"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/number2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/number4"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="4"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/number3"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <!-- Second Line -->
+        <LinearLayout
+            android:id="@+id/linearNumbers5To8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearNumbers1To4">
+
+            <Button
+                android:id="@+id/number5"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="5"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/number6"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="6"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/number1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/number7"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="7"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/number2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/number8"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="8"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/number3"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <!-- Third Line -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearNumbers5To8">
+
+            <Button
+                android:id="@+id/number9"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="9"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/number0"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/number1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonDot"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:backgroundTint="#0f0b0c"
+                android:text="."
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/number1"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberLayout">
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:backgroundTint="#0f0b0c"
+            android:text="@string/plus"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:backgroundTint="#0f0b0c"
+            android:text="@string/minus"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/buttonDivision"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:backgroundTint="#0f0b0c"
+            android:text="@string/division"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:backgroundTint="#0f0b0c"
+            android:text="@string/multiply"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDelete"
+        app:layout_constraintVertical_bias="0.342" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:backgroundTint="#0f0b0c"
+        android:text="Delete"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

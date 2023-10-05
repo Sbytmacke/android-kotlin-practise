@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0e0b10"
+    tools:context=".ui.boobaTyping.BoobaTypingFragment"
+    tools:layout_editor_absoluteX="-3dp"
+    tools:layout_editor_absoluteY="40dp">
+
+    <TextView
+        android:id="@+id/textTittleVykas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:shadowColor="#A0000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="Booba Typing Darling"
+        android:textColor="#993672"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Texto que se generara aleatoriamente -->
+
+    <!-- Primera linea de botones -->
+    <ImageView
+        android:id="@+id/imageViewVykas"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:background="#0e0b10"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vykas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTittleVykas" />
+
+    <LinearLayout
+        android:id="@+id/linearRandomTyping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewVykas">
+
+        <TextView
+            android:id="@+id/textRandomTyping1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/textRandomTyping2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/textRandomTyping3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/textRandomTyping4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/textRandomTyping5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/textRandomTyping6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/textRandomTyping7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#ffffff"
+            android:textSize="45sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearRandomTyping">
+
+        <Button
+            android:id="@+id/buttonQ"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="Q"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonW"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:text="W"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonE"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:text="E"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Segunda linea de botones -->
+    <LinearLayout
+        android:id="@+id/linearButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearButton1">
+
+        <Button
+            android:id="@+id/buttonA"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="A"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/buttonS"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:text="S"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonD"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:text="D"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Streak -->
+
+    <!-- Top Record -->
+
+    <LinearLayout
+        android:id="@+id/linearStreak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearButton2">
+
+        <TextView
+            android:id="@+id/textStreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Streak: "
+            android:textColor="#993672"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/countStreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearTopRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearStreak">
+
+        <TextView
+            android:id="@+id/texRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Top record: "
+            android:textColor="#993672"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/countRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

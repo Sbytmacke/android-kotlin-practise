@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal">
+    <!-- Contenido de la nota (por ejemplo, título y contenido) -->
+    <LinearLayout
+        android:id="@+id/layout_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Si queremos imágenes utilizamos dependencia: Glide -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Título de la nota"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Contenido de la nota"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/add_note"
+            android:src="@drawable/ic_launcher_background" />
+    </LinearLayout>
+
+    <!-- Botón de borrado -->
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Borrar" />
+</LinearLayout>
+
+
+
