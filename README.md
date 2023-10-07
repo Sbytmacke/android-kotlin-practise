@@ -2,7 +2,7 @@
 
 Repositories to study Android structure
 
-- Notes App
-- Booba Typing (mini-game)
-- Reproductor music
-- Calculator
+- [x] Booba Typing (mini-game)
+- [ ] Notes App
+- [ ] Reproductor music
+- [ ] Calculator
